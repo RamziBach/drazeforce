@@ -1,22 +1,20 @@
 import Seo from '../components/global/seo/Seo';
 import Header from '../components/global/header/Header';
-import Index from '../components/home/index/Index';
-import About from '../components/home/about/About';
+import Index from '../components/store/index/Index';
 
-const Home = ({ price }) => {
+const Store = ({ price }) => {
   return (
     <>
-      <Seo title="DRAZE - HOME" />
+      <Seo title="DRAZE - STORE" />
       <Header price={price} />
       <main>
         <Index />
-        <About />
       </main>
     </>
   );
 };
 
-export default Home;
+export default Store;
 
 export async function getServerSideProps() {
   const response = await fetch(

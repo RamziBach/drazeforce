@@ -25,7 +25,9 @@ const Header = ({ price }) => {
                   <button className={styles.navBtns}>$draze</button>
                 </li>
                 <li>
-                  <button className={styles.navBtns}>store</button>
+                  <Link href="/store">
+                    <a className={styles.navBtns}>store</a>
+                  </Link>
                 </li>
                 <li>
                   <button className={styles.navBtns}>vip</button>
