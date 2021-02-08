@@ -1,0 +1,63 @@
+.landing {
+  margin-bottom: 10em;
+}
+
+.container {
+  width: var(--c-width);
+  margin: 0 auto;
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 600px;
+  height: 600px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  transform: translateZ(60px);
+}
+
+.card:hover {
+  box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+}
+
+.content {
+  text-align: center;
+  margin-left: 5em;
+}
+
+.cardTitle {
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+}
+
+.title {
+  margin: 0;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.description {
+  max-width: 34em;
+  opacity: 0.7;
+  margin: 2em 0;
+}
+
+.parallaxEffect {
+  text-align: center;
+  width: 600px;
+  height: 600px;
+  border-radius: 5px;
+  transform-style: preserve-3d;
+  background-image: url('/album1.jpg');
+  background-size: cover;
+  background-position: center center;
+  will-change: transform;
+}

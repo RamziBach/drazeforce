@@ -1,11 +1,15 @@
 import Seo from '../components/global/seo/Seo';
 import Header from '../components/global/header/Header';
+import Landing from '../components/home/landing/Landing';
 
 const Home = ({ price }) => {
   return (
     <>
-      <Seo title="Draze - Home" />
+      <Seo title="DRAZE - HOME" />
       <Header price={price} />
+      <main>
+        <Landing />
+      </main>
     </>
   );
 };
