@@ -1,7 +1,6 @@
 import Seo from '../components/global/seo/Seo';
 import Header from '../components/global/header/Header';
 import Index from '../components/home/index/Index';
-import About from '../components/home/about/About';
 
 const Home = ({ price }) => {
   return (
@@ -10,7 +9,6 @@ const Home = ({ price }) => {
       <Header price={price} />
       <main>
         <Index />
-        <About />
       </main>
     </>
   );
