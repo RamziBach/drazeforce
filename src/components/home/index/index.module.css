@@ -1,5 +1,5 @@
 .landing {
-  margin-bottom: 10em;
+  margin-bottom: 15em;
 }
 
 .container {
@@ -52,7 +52,7 @@
   height: 600px;
   border-radius: 5px;
   transform-style: preserve-3d;
-  background-image: url('/album1.jpg');
+  background-image: url('/ep1.jpg');
   background-size: cover;
   background-position: center center;
   will-change: transform;

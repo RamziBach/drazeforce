@@ -1,6 +1,7 @@
 import Seo from '../components/global/seo/Seo';
 import Header from '../components/global/header/Header';
 import Index from '../components/home/index/Index';
+import Discography from '../components/home/discography/Discography';
 
 const Home = ({ price }) => {
   return (
@@ -9,6 +10,7 @@ const Home = ({ price }) => {
       <Header price={price} />
       <main>
         <Index />
+        <Discography />
       </main>
     </>
   );
@@ -21,7 +23,7 @@ export async function getServerSideProps() {
     'https://api.rally.io/v1/creator_coins/DRAZE/price'
   );
   const data = await response.json();
-  const price = data.priceInUSD.slice(0, 5);
+  const price = data.priceInUSD.toString().slice(0, 5);
 
   return {
     props: { price },

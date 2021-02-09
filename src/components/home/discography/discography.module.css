@@ -1,0 +1,77 @@
+.discography {
+  margin-bottom: 10em;
+}
+
+.container {
+  width: var(--c-width);
+  margin: 0 auto;
+}
+
+.albumsGrid {
+  display: grid;
+  justify-content: center;
+  grid-gap: 1em;
+  grid-template-columns: repeat(5, 250px);
+  grid-template-rows: repeat(3, 250px);
+  grid-template-areas:
+    'episo2 ...... episo1 ...... episo3'
+    'episo2 singl1 episo1 singl2 episo3'
+    '...... singl1 btn singl2 ......';
+}
+
+.title {
+  margin: 0 0 5rem 0;
+  text-align: center;
+  line-height: 1;
+}
+
+.ep1 {
+  grid-area: episo1;
+  background-image: url('/ep1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.ep2 {
+  grid-area: episo2;
+  background-image: url('/ep2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.ep3 {
+  grid-area: episo3;
+  background-image: url('/ep3.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.singl1 {
+  grid-area: singl1;
+  background-image: url('/single1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.singl2 {
+  grid-area: singl2;
+  background-image: url('/single2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.btn {
+  grid-area: btn;
+  justify-self: center;
+  align-self: center;
+}
