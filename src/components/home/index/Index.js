@@ -102,6 +102,14 @@ const Index = () => {
               >
                 <i className="i fab fa-discord"></i>
               </a>
+              <a
+                href="https://www.twitch.tv/drazeforce"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Twitch"
+              >
+                <i className="i fab fa-twitch"></i>
+              </a>
             </div>
           </div>
         </div>

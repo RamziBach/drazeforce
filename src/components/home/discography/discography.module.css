@@ -1,5 +1,5 @@
 .discography {
-  margin-bottom: 10em;
+  margin-bottom: 15em;
 }
 
 .container {
@@ -20,58 +20,102 @@
 }
 
 .title {
-  margin: 0 0 5rem 0;
+  margin: 0;
   text-align: center;
   line-height: 1;
 }
 
+.description {
+  text-align: center;
+  opacity: 0.7;
+  margin: 2.5rem auto 5rem auto;
+  max-width: 40em;
+}
+
 .ep1 {
   grid-area: episo1;
-  background-image: url('/ep1.jpg');
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  text-align: center;
   border-radius: 5px;
+  transform-style: preserve-3d;
+  background-image: url('/ep1.jpg');
+  background-size: cover;
+  background-position: center center;
+  will-change: transform;
 }
 
 .ep2 {
   grid-area: episo2;
-  background-image: url('/ep2.jpg');
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  text-align: center;
   border-radius: 5px;
+  transform-style: preserve-3d;
+  background-image: url('/ep2.jpg');
+  background-size: cover;
+  background-position: center center;
+  will-change: transform;
 }
 
 .ep3 {
   grid-area: episo3;
-  background-image: url('/ep3.jpg');
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  text-align: center;
   border-radius: 5px;
+  transform-style: preserve-3d;
+  background-image: url('/ep3.jpg');
+  background-size: cover;
+  background-position: center center;
+  will-change: transform;
 }
 
 .singl1 {
   grid-area: singl1;
-  background-image: url('/single1.jpg');
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  text-align: center;
   border-radius: 5px;
+  transform-style: preserve-3d;
+  background-image: url('/single1.jpg');
+  background-size: cover;
+  background-position: center center;
+  will-change: transform;
 }
 
 .singl2 {
   grid-area: singl2;
-  background-image: url('/single2.jpg');
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  text-align: center;
   border-radius: 5px;
+  transform-style: preserve-3d;
+  background-image: url('/single2.jpg');
+  background-size: cover;
+  background-position: center center;
+  will-change: transform;
 }
 
 .btn {
   grid-area: btn;
   justify-self: center;
   align-self: center;
+}
+
+.card {
+  width: 250;
+  /* height: 116px; */
+  transform: translateZ(60px);
+  /* background-color: var(--clr-rgba);
+  border-radius: 5px; */
+  /* padding-top: 0.1em; */
+}
+
+.cardTitle {
+  user-select: none;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  /* transform: translate(0, -35px); */
+}
+
+.cardBtn {
+  /* transform: translate(0, -35px); */
+  margin-bottom: 1em;
 }

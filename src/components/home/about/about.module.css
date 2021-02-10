@@ -1,0 +1,47 @@
+.about {
+  margin-bottom: 15em;
+}
+
+.container {
+  width: var(--c-width);
+  margin: 0 auto;
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionTitle {
+  text-align: center;
+  line-height: 1;
+}
+
+.content {
+  text-align: center;
+  margin-right: 5em;
+}
+
+.title {
+  margin: 0 0 1rem 0;
+}
+
+.description {
+  opacity: 0.7;
+  max-width: 600px;
+  margin: 0 0 1rem 0;
+}
+
+.border iframe {
+  border: 1px solid var(--clr-accent);
+  border-radius: 5px;
+  box-shadow: 20px 20px var(--clr-rgba);
+  transition: all 0.3s;
+}
+
+.border iframe:hover,
+.border iframe:focus {
+  box-shadow: 10px 10px var(--clr-rgba);
+  transform: translate(0, 10px);
+}

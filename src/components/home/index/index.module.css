@@ -25,6 +25,7 @@
 }
 
 .cardTitle {
+  user-select: none;
   line-height: 1;
   text-transform: uppercase;
   color: var(--clr-accent);
