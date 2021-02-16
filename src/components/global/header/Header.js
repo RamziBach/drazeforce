@@ -49,6 +49,9 @@ const Header = ({ price }) => {
             >
               ${price}
             </a>
+            <button title="What is this number?">
+              <i className={`fas fa-info-circle ${styles.i}`}></i>
+            </button>
           </div>
         </div>
       </div>

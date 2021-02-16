@@ -76,3 +76,16 @@
 .price:focus {
   color: var(--clr-accent);
 }
+
+.i {
+  position: absolute;
+  transform: translate(6px, -30px);
+  font-size: var(--fs-h4);
+  color: var(--clr-accent);
+  transition: all 0.3s;
+}
+
+.i:hover,
+.i:focus {
+  transform: translate(6px, -30px) scale(1.1);
+}
