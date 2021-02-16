@@ -89,3 +89,82 @@
 .i:focus {
   transform: translate(6px, -30px) scale(1.1);
 }
+
+.tooltipContainer {
+  position: absolute;
+  background-color: var(--clr-accent);
+  max-width: 25em;
+  transform: translate(60px, 130px);
+  padding: 1em;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.arrowUp {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid var(--clr-accent);
+  transform: translate(322px, -36px);
+}
+
+.tooltipHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tooltipHeaderChild1 {
+  display: flex;
+  align-items: center;
+}
+
+.tooltipTitle {
+  margin: 0;
+  line-height: 1;
+  text-transform: capitalize;
+  margin-left: 0.5em;
+}
+
+.ii {
+  font-size: var(--fs-h4);
+  color: var(--clr-light);
+}
+
+.close {
+  transition: all 0.3s;
+}
+
+.close:hover {
+  transform: scale(1.1);
+}
+
+.tooltipDescription {
+  font-size: var(--fs-small);
+  opacity: 0.7;
+}
+
+.tooltipBtn {
+  font-size: var(--fs-small);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  color: var(--clr-light);
+  background-color: transparent;
+  border: 2px solid var(--clr-light);
+  border-radius: 5px;
+  transition: all 0.3s;
+  opacity: 0.7;
+  min-width: 8em;
+}
+
+.tooltipBtn:hover,
+.tooltipBtn:focus {
+  opacity: 1;
+}
+
+#btn1 {
+  margin-right: 1em;
+}
