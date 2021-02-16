@@ -1,9 +1,16 @@
 import Image from 'next/image';
 import styles from './footer.module.css';
 
-const Footer = () => {
+const Footer = ({ isBottom = false }) => {
+  const footerStyle = {
+    position: 'absolute',
+    bottom: '0',
+    width: '100%',
+    height: '251.72px',
+  };
+
   return (
-    <footer>
+    <footer style={isBottom ? footerStyle : {}}>
       <div className={styles.container}>
         <div className={styles.parent}>
           <div className={styles.socials}>

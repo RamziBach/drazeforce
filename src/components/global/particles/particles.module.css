@@ -5,9 +5,6 @@
 }
 
 .canvas {
-  /* border: 1px solid white; */
   position: absolute;
-  /* top: 260px;
-  right: 310px; */
   transform: translate(0, -10px);
 }

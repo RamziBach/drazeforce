@@ -3,6 +3,7 @@ import Header from '../components/global/header/Header';
 import Index from '../components/home/index/Index';
 import About from '../components/home/about/About';
 import Discography from '../components/home/discography/Discography';
+import Contact from '../components/home/contact/Contact';
 import Footer from '../components/global/footer/Footer';
 
 const Home = ({ price }) => {
@@ -14,6 +15,7 @@ const Home = ({ price }) => {
         <Index />
         <About />
         <Discography />
+        <Contact />
       </main>
       <Footer />
     </>
