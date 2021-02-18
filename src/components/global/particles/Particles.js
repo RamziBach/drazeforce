@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import styles from './particles.module.css';
 
-const Particles = () => {
+const Particles = ({ up = '-10px', amount = 4 }) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const Particles = () => {
 
     function draw() {
       if (canvas.getContext) {
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < amount; i++) {
           const x = Math.floor(Math.random() * 550 + 15);
           const y = Math.floor(Math.random() * 150 + 15);
           const a = Math.random();
@@ -54,7 +54,11 @@ const Particles = () => {
 
   return (
     <div className={styles.container}>
-      <canvas className={styles.canvas} ref={canvasRef}></canvas>
+      <canvas
+        style={{ transform: `translate(0, ${up})` }}
+        className={styles.canvas}
+        ref={canvasRef}
+      ></canvas>
     </div>
   );
 };

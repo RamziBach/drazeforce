@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './header.module.css';
@@ -8,7 +8,11 @@ const Header = ({ price }) => {
 
   const onMouseEnter = () => setOpacity(1);
 
-  const onMouseLeave = () => setOpacity(0);
+  const handleClose = () => setOpacity(0);
+
+  useEffect(() => {
+    console.log('Website developed by Ramzi Bach - www.ramzibach.com');
+  }, []);
 
   return (
     <header className={styles.header}>
@@ -29,7 +33,9 @@ const Header = ({ price }) => {
                   </Link>
                 </li>
                 <li>
-                  <button className={styles.navBtns}>$draze</button>
+                  <Link href="/draze">
+                    <a className={styles.navBtns}>$draze</a>
+                  </Link>
                 </li>
                 <li>
                   <Link href="/store">
@@ -69,7 +75,7 @@ const Header = ({ price }) => {
                   <i className={`fas fa-info-circle ${styles.ii}`}></i>
                   <h5 className={styles.tooltipTitle}>what is this number?</h5>
                 </div>
-                <button className={styles.close} onClick={onMouseLeave}>
+                <button className={styles.close} onClick={handleClose}>
                   <i className={`fas fa-times ${styles.ii}`}></i>
                 </button>
               </div>
