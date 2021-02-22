@@ -1,6 +1,7 @@
 import Seo from '../components/global/seo/Seo';
 import Header from '../components/global/header/Header';
 import Landing from '../components/draze/landing/Landing';
+import Services from '../components/draze/services/Services';
 import Footer from '../components/global/footer/Footer';
 
 const Draze = ({ price }) => {
@@ -9,7 +10,8 @@ const Draze = ({ price }) => {
       <Seo title="DRAZE - $DRAZE" />
       <Header price={price} />
       <Landing />
-      <Footer isBottom={true} />
+      <Services />
+      <Footer />
     </>
   );
 };

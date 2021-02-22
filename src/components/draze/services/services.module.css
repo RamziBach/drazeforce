@@ -1,0 +1,62 @@
+.services {
+  margin-bottom: 15em;
+}
+
+.container {
+  width: var(--c-width);
+  margin: 0 auto;
+}
+
+.title {
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 0;
+  line-height: 1;
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.childparent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.child {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  max-width: 500px;
+}
+
+.timescaleContainer {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.serviceTitle {
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+
+.servicesContainer {
+  padding: 1em;
+  text-align: center;
+}
+
+.servicesDescription {
+  text-align: center;
+  opacity: 0.7;
+  margin-bottom: 1.5em;
+}
+
+.marginLeft {
+  margin-left: 2.5em;
+}
+
+#marginBottom {
+  margin-bottom: 2.5em;
+}

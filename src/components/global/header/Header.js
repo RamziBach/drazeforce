@@ -87,7 +87,9 @@ const Header = ({ price }) => {
                 <button id={styles.btn1} className={styles.tooltipBtn}>
                   buy now
                 </button>
-                <button className={styles.tooltipBtn}>learn more</button>
+                <Link href="/draze">
+                  <a className={styles.tooltipBtn}>Learn more</a>
+                </Link>
               </div>
             </div>
           </div>
