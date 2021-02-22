@@ -87,7 +87,13 @@ const Header = ({ price }) => {
               </p>
               <div>
                 <button id={styles.btn1} className={styles.tooltipBtn}>
-                  buy now
+                  <a
+                    href="https://rally.io/creator/DRAZE/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    buy now
+                  </a>
                 </button>
                 <Link href="/draze">
                   <a className={styles.tooltipBtn}>Learn more</a>
