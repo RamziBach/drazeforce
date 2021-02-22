@@ -43,7 +43,9 @@ const Header = ({ price }) => {
                   </Link>
                 </li>
                 <li>
-                  <button className={styles.navBtns}>vip</button>
+                  <Link href="/vip">
+                    <a className={styles.navBtns}>vip</a>
+                  </Link>
                 </li>
               </ul>
             </nav>

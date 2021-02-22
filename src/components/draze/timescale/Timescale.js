@@ -109,12 +109,15 @@ const Timescale = () => {
       friction: 0.0001,
       restitution: 0.7,
       render: {
-        sprite: {
-          texture: '/coin.svg',
-          xScale: 0.35,
-          yScale: 0.35,
-        },
+        fillStyle: '#f43f70',
       },
+      // render: {
+      //   sprite: {
+      //     texture: '/coin.svg',
+      //     xScale: 0.35,
+      //     yScale: 0.35,
+      //   },
+      // },
     };
 
     // add some small bouncy circles... remember Swordfish?

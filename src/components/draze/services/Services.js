@@ -12,28 +12,42 @@ const Services = () => {
               <div className={styles.timescaleContainer}>
                 <Timescale />
               </div>
-              <h4 className={styles.serviceTitle}>lorem ipsum</h4>
+              <h4 className={styles.serviceTitle}>Demo Review</h4>
               <div className={styles.servicesContainer}>
                 <p className={styles.servicesDescription}>
                   Dolor velit amet eu ex aliqua occaecat dolor Lorem est laborum
                   labore. Duis aute Lorem fugiat non magna exercitation laboris.
                   Proident officia esse tempor fugiat.
                 </p>
-                <button className="btn-border">buy now</button>
+                <a
+                  href="https://www.rally.io/creator/DRAZE/?inputType=USD&amount=100&note=Services for sale"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-border"
+                >
+                  buy now
+                </a>
               </div>
             </div>
             <div className={`${styles.child} ${styles.marginLeft}`}>
               <div className={styles.timescaleContainer}>
                 <Timescale />
               </div>
-              <h4 className={styles.serviceTitle}>lorem ipsum</h4>
+              <h4 className={styles.serviceTitle}>Mastering</h4>
               <div className={styles.servicesContainer}>
                 <p className={styles.servicesDescription}>
                   Dolor velit amet eu ex aliqua occaecat dolor Lorem est laborum
                   labore. Duis aute Lorem fugiat non magna exercitation laboris.
                   Proident officia esse tempor fugiat.
                 </p>
-                <button className="btn-border">buy now</button>
+                <a
+                  href="https://www.rally.io/creator/DRAZE/?inputType=USD&amount=100&note=Services for sale"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-border"
+                >
+                  buy now
+                </a>
               </div>
             </div>
           </div>
@@ -42,28 +56,42 @@ const Services = () => {
               <div className={styles.timescaleContainer}>
                 <Timescale />
               </div>
-              <h4 className={styles.serviceTitle}>lorem ipsum</h4>
+              <h4 className={styles.serviceTitle}>Produce a Track</h4>
               <div className={styles.servicesContainer}>
                 <p className={styles.servicesDescription}>
                   Dolor velit amet eu ex aliqua occaecat dolor Lorem est laborum
                   labore. Duis aute Lorem fugiat non magna exercitation laboris.
                   Proident officia esse tempor fugiat.
                 </p>
-                <button className="btn-border">buy now</button>
+                <a
+                  href="https://www.rally.io/creator/DRAZE/?inputType=USD&amount=100&note=Services for sale"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-border"
+                >
+                  buy now
+                </a>
               </div>
             </div>
             <div className={`${styles.child} ${styles.marginLeft}`}>
               <div className={styles.timescaleContainer}>
                 <Timescale />
               </div>
-              <h4 className={styles.serviceTitle}>lorem ipsum</h4>
+              <h4 className={styles.serviceTitle}>1 on 1 mentoring</h4>
               <div className={styles.servicesContainer}>
                 <p className={styles.servicesDescription}>
                   Dolor velit amet eu ex aliqua occaecat dolor Lorem est laborum
                   labore. Duis aute Lorem fugiat non magna exercitation laboris.
                   Proident officia esse tempor fugiat.
                 </p>
-                <button className="btn-border">buy now</button>
+                <a
+                  href="https://www.rally.io/creator/DRAZE/?inputType=USD&amount=100&note=Services for sale"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-border"
+                >
+                  buy now
+                </a>
               </div>
             </div>
           </div>
