@@ -4,11 +4,11 @@ import Image from 'next/image';
 import styles from './header.module.css';
 
 const Header = ({ price }) => {
-  const [opacity, setOpacity] = useState(0);
+  const [display, setDisplay] = useState('none');
 
-  const onMouseEnter = () => setOpacity(1);
+  const onMouseEnter = () => setDisplay('block');
 
-  const handleClose = () => setOpacity(0);
+  const handleClose = () => setDisplay('none');
 
   useEffect(() => {
     console.log('Website developed by Ramzi Bach - www.ramzibach.com');
@@ -68,7 +68,7 @@ const Header = ({ price }) => {
               <i className={`fas fa-info-circle ${styles.i}`}></i>
             </button>
             <div
-              style={{ opacity: opacity }}
+              style={{ display: display }}
               className={styles.tooltipContainer}
             >
               <div className={styles.arrowUp}></div>

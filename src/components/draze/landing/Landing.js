@@ -22,7 +22,14 @@ const Landing = () => {
               urus in massa tempor nec feugiat nisl pretium. Eget magna
               fermentum iaculis eu non diam. Auctor urna nunc id cursus.
             </p>
-            <button className="btn-border">buy now</button>
+            <a
+              href="https://rally.io/creator/DRAZE/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-border"
+            >
+              buy now
+            </a>
           </div>
           <div className={styles.childContainer2}>
             <Particles up="-190px" amount={10} />

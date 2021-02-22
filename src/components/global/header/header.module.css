@@ -90,6 +90,15 @@
   transform: translate(6px, -30px) scale(1.1);
 }
 
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .tooltipContainer {
   position: absolute;
   background-color: var(--clr-accent);
@@ -97,7 +106,10 @@
   transform: translate(60px, 130px);
   padding: 1em;
   border-radius: 10px;
-  transition: all 0.3s;
+  /* transition: all 0.3s; */
+  animation-name: opacity;
+  animation-fill-mode: both;
+  animation-duration: 0.3s;
 }
 
 .arrowUp {
