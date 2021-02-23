@@ -122,6 +122,15 @@
   transform: translate(322px, -36px);
 }
 
+@media (max-width: 1600px) {
+  .arrowUp {
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid var(--clr-accent);
+    transform: translate(275px, -29px);
+  }
+}
+
 .tooltipHeader {
   display: flex;
   justify-content: space-between;

@@ -66,3 +66,26 @@
   justify-content: space-evenly;
   align-items: center;
 }
+
+@media (max-width: 1600px) {
+  .parallaxEffect {
+    width: 450px;
+    height: 450px;
+  }
+
+  .card {
+    width: 450px;
+    height: 450px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .parent {
+    flex-direction: column;
+  }
+
+  .content {
+    order: -1;
+    margin: 3em 0 10em 0;
+  }
+}

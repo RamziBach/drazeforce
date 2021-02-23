@@ -1,0 +1,26 @@
+.landing {
+  margin-bottom: 15em;
+}
+
+.container {
+  width: var(--c-width);
+  margin: 0 auto;
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  margin-top: 0;
+}
+
+.description {
+  opacity: 0.7;
+}

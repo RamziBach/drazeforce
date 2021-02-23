@@ -21,10 +21,20 @@
 .content {
   text-align: center;
   margin-right: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
   margin: 0 0 1rem 0;
+}
+
+.imgContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
 }
 
 .profile {
@@ -48,4 +58,42 @@
 .border iframe:focus {
   box-shadow: 10px 10px var(--clr-rgba);
   transform: translate(0, 10px);
+}
+
+.reactPlayer {
+  width: 640px !important;
+  height: 360px !important;
+}
+
+@media (max-width: 1600px) {
+  .imgContainer {
+    width: 150px;
+    height: 150px;
+  }
+
+  .reactPlayer {
+    width: 560px !important;
+    height: 280px !important;
+  }
+}
+
+@media (max-width: 1300px) {
+  .reactPlayer {
+    width: 500px !important;
+    height: 220px !important;
+  }
+}
+
+@media (max-width: 1150px) {
+  .parent {
+    flex-direction: column;
+  }
+
+  .sectionTitle {
+    display: none;
+  }
+
+  .content {
+    margin: 0 0 2.5em 0;
+  }
 }

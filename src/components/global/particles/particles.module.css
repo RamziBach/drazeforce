@@ -7,4 +7,5 @@
 .canvas {
   position: absolute;
   transform: translate(0, -10px);
+  /* border: 1px solid white; */
 }

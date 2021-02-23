@@ -18,7 +18,7 @@ const Draze = ({ price }) => {
 
 export default Draze;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const response = await fetch(
     'https://api.rally.io/v1/creator_coins/DRAZE/price'
   );
@@ -27,5 +27,6 @@ export async function getServerSideProps() {
 
   return {
     props: { price },
+    revalidate: 30,
   };
 }

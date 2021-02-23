@@ -48,7 +48,9 @@ const Footer = ({ isBottom = false }) => {
                 <i className="i fab fa-youtube"></i>
               </a>
             </div>
-            <Image src="/logo.png" alt="logo" width={200} height={200} />
+            <div className={styles.imgContainer}>
+              <Image src="/logo.png" alt="logo" layout="fill" />
+            </div>
             <div className={styles.rightSocials}>
               <a
                 href="https://open.spotify.com/artist/1ro5yiwSkJ27qvppIgqb7S?si=czF1QxKyTTu-Lgi9EMLt9w"

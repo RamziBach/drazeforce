@@ -119,3 +119,32 @@
   /* transform: translate(0, -35px); */
   margin-bottom: 1em;
 }
+
+@media (max-width: 1600px) {
+  .albumsGrid {
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: repeat(3, 200px);
+  }
+}
+
+@media (max-width: 1300px) {
+  .albumsGrid {
+    grid-template-columns: repeat(5, 150px);
+    grid-template-rows: repeat(3, 150px);
+  }
+
+  .cardBtn {
+    font-size: var(--fs-small);
+  }
+}
+
+@media (max-width: 900px) {
+  .albumsGrid {
+    grid-template-columns: repeat(5, 120px);
+    grid-template-rows: repeat(3, 120px);
+  }
+
+  .cardBtn {
+    font-size: 0.6rem;
+  }
+}

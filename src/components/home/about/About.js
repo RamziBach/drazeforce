@@ -9,13 +9,14 @@ const About = () => {
         <h3 className={styles.sectionTitle}>About</h3>
         <div className={styles.parent}>
           <div className={styles.content}>
-            <Image
-              className={styles.profile}
-              src="/profile.jpg"
-              alt="logo"
-              width={200}
-              height={200}
-            />
+            <div className={styles.imgContainer}>
+              <Image
+                className={styles.profile}
+                src="/profile.jpg"
+                alt="logo"
+                layout="fill"
+              />
+            </div>
             <h3 className={styles.title}>Nick Morris</h3>
             <p className={styles.description}>
               Growing up in the 90s, Nick Morris was always inspired by the
@@ -27,7 +28,10 @@ const About = () => {
             <a className="btn-border">Twitch</a>
           </div>
           <div className={styles.border}>
-            <ReactPlayer url="https://www.twitch.tv/drazeforce" />
+            <ReactPlayer
+              className={styles.reactPlayer}
+              url="https://www.twitch.tv/drazeforce"
+            />
           </div>
         </div>
       </div>

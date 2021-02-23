@@ -10,6 +10,12 @@
   align-items: center;
 }
 
+.imgContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
 .socials {
   display: flex;
   justify-content: center;
@@ -37,4 +43,11 @@
   opacity: 0.7;
   font-size: var(--fs-small);
   text-align: center;
+}
+
+@media (max-width: 1600px) {
+  .imgContainer {
+    width: 100px;
+    height: 100px;
+  }
 }

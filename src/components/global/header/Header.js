@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import VipAuth from '../vip/VipAuth';
 import styles from './header.module.css';
 
-const Header = ({ price }) => {
-  const [display, setDisplay] = useState('none');
+const Header = ({ price, isOnVipPage = false }) => {
+  const [tooltipDisplay, setTooltipDisplay] = useState('none');
+  const [vipDisplay, setVipDisplay] = useState('none');
 
-  const onMouseEnter = () => setDisplay('block');
-
-  const handleClose = () => setDisplay('none');
+  const onMouseEnterTooltip = () => setTooltipDisplay('block');
+  const handleCloseTooltip = () => setTooltipDisplay('none');
+  const handleVipOpen = () => setVipDisplay('flex');
+  const handleVipClose = () => setVipDisplay('none');
 
   useEffect(() => {
     console.log('Website developed by Ramzi Bach - www.ramzibach.com');
@@ -43,9 +46,13 @@ const Header = ({ price }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/vip">
-                    <a className={styles.navBtns}>vip</a>
-                  </Link>
+                  {isOnVipPage ? (
+                    <button className={styles.navBtns}>vip</button>
+                  ) : (
+                    <button onClick={handleVipOpen} className={styles.navBtns}>
+                      vip
+                    </button>
+                  )}
                 </li>
               </ul>
             </nav>
@@ -64,11 +71,11 @@ const Header = ({ price }) => {
             >
               ${price}
             </a>
-            <button onMouseEnter={onMouseEnter} title="Tooltip">
+            <button onMouseEnter={onMouseEnterTooltip} title="Tooltip">
               <i className={`fas fa-info-circle ${styles.i}`}></i>
             </button>
             <div
-              style={{ display: display }}
+              style={{ display: tooltipDisplay }}
               className={styles.tooltipContainer}
             >
               <div className={styles.arrowUp}></div>
@@ -77,7 +84,7 @@ const Header = ({ price }) => {
                   <i className={`fas fa-info-circle ${styles.ii}`}></i>
                   <h5 className={styles.tooltipTitle}>what is this number?</h5>
                 </div>
-                <button className={styles.close} onClick={handleClose}>
+                <button className={styles.close} onClick={handleCloseTooltip}>
                   <i className={`fas fa-times ${styles.ii}`}></i>
                 </button>
               </div>
@@ -103,6 +110,7 @@ const Header = ({ price }) => {
           </div>
         </div>
       </div>
+      <VipAuth display={vipDisplay} handleClose={handleVipClose} />
     </header>
   );
 };
