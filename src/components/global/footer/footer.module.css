@@ -51,3 +51,21 @@
     height: 100px;
   }
 }
+
+@media (max-width: 400px) {
+  .leftSocials {
+    margin-right: 0.25em;
+  }
+
+  .rightSocials {
+    margin-left: 0.25em;
+  }
+
+  .leftSocials a {
+    margin-left: 0.9em;
+  }
+
+  .rightSocials a {
+    margin-right: 0.9em;
+  }
+}

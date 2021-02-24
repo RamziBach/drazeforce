@@ -89,3 +89,31 @@
     margin: 3em 0 10em 0;
   }
 }
+
+@media (max-width: 500px) {
+  .parallaxEffect {
+    width: 350px;
+    height: 350px;
+  }
+
+  .card {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 380px) {
+  .parallaxEffect {
+    width: 300px;
+    height: 300px;
+  }
+
+  .card {
+    width: 300px;
+    height: 300px;
+  }
+
+  .card a {
+    font-size: var(--fs-small);
+  }
+}

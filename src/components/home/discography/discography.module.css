@@ -148,3 +148,18 @@
     font-size: 0.6rem;
   }
 }
+
+@media (max-width: 750px) {
+  .albumsGrid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 120px);
+    grid-gap: 1.5em;
+    grid-template-areas:
+      'episo2 episo2 episo1 episo1'
+      'episo2 episo2 episo1 episo1'
+      '...... episo3 episo3 ......'
+      '...... episo3 episo3 ......'
+      'singl1 singl1 singl2 singl2'
+      'singl1 singl1 singl2 singl2';
+  }
+}

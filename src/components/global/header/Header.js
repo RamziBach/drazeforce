@@ -2,16 +2,21 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import VipAuth from '../vip/VipAuth';
+import MobileNav from '../mobilenav/MobileNav';
 import styles from './header.module.css';
+import Tooltip from '../tooltip/Tooltip';
 
 const Header = ({ price, isOnVipPage = false }) => {
   const [tooltipDisplay, setTooltipDisplay] = useState('none');
   const [vipDisplay, setVipDisplay] = useState('none');
+  const [isMobileDisplayOpen, setIsMobileDisplayOpen] = useState(false);
 
   const onMouseEnterTooltip = () => setTooltipDisplay('block');
   const handleCloseTooltip = () => setTooltipDisplay('none');
   const handleVipOpen = () => setVipDisplay('flex');
   const handleVipClose = () => setVipDisplay('none');
+  const handleMobileClick = () =>
+    setIsMobileDisplayOpen(prevState => !prevState);
 
   useEffect(() => {
     console.log('Website developed by Ramzi Bach - www.ramzibach.com');
@@ -27,7 +32,7 @@ const Header = ({ price, isOnVipPage = false }) => {
           >
             <h3 className={styles.title}>DRAZE FORCE</h3>
           </div>
-          <div className={styles.flex}>
+          <div className={`${styles.flex} ${styles.navContainer}`}>
             <nav className={styles.menu}>
               <ul className={styles.navigation}>
                 <li>
@@ -61,7 +66,7 @@ const Header = ({ price, isOnVipPage = false }) => {
             className={`${styles.flex} ${styles.drazeCoin}`}
             aria-label="Draze coin price"
           >
-            <Image src="/logo.png" alt="logo" width={60} height={60} />
+            <Image src="/logo2.png" alt="logo" width={60} height={60} />
             <a
               href="https://rally.io/creator/DRAZE/"
               target="_blank"
@@ -74,43 +79,20 @@ const Header = ({ price, isOnVipPage = false }) => {
             <button onMouseEnter={onMouseEnterTooltip} title="Tooltip">
               <i className={`fas fa-info-circle ${styles.i}`}></i>
             </button>
-            <div
-              style={{ display: tooltipDisplay }}
-              className={styles.tooltipContainer}
-            >
-              <div className={styles.arrowUp}></div>
-              <div className={styles.tooltipHeader}>
-                <div className={styles.tooltipHeaderChild1}>
-                  <i className={`fas fa-info-circle ${styles.ii}`}></i>
-                  <h5 className={styles.tooltipTitle}>what is this number?</h5>
-                </div>
-                <button className={styles.close} onClick={handleCloseTooltip}>
-                  <i className={`fas fa-times ${styles.ii}`}></i>
-                </button>
-              </div>
-              <p className={styles.tooltipDescription}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <div>
-                <button id={styles.btn1} className={styles.tooltipBtn}>
-                  <a
-                    href="https://rally.io/creator/DRAZE/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    buy now
-                  </a>
-                </button>
-                <Link href="/draze">
-                  <a className={styles.tooltipBtn}>Learn more</a>
-                </Link>
-              </div>
-            </div>
+            <Tooltip
+              display={tooltipDisplay}
+              handleClose={handleCloseTooltip}
+            />
+          </div>
+          <div className={`${styles.hamburgerContainer} ${styles.flex}`}>
+            <button onClick={handleMobileClick}>
+              <i className={`fas fa-bars ${styles.hamburger}`}></i>
+            </button>
           </div>
         </div>
       </div>
       <VipAuth display={vipDisplay} handleClose={handleVipClose} />
+      <MobileNav price={price} display={isMobileDisplayOpen} />
     </header>
   );
 };

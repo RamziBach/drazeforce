@@ -97,3 +97,28 @@
     margin: 0 0 2.5em 0;
   }
 }
+
+@media (max-width: 600px) {
+  .reactPlayer {
+    width: 400px !important;
+    height: 200px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .reactPlayer {
+    width: 350px !important;
+    height: 200px !important;
+  }
+
+  .border iframe {
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .reactPlayer {
+    width: 320px !important;
+    height: 200px !important;
+  }
+}
