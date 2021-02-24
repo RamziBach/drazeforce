@@ -1,8 +1,15 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import VipAuth from '../vip/VipAuth';
 import styles from './mobilenav.module.css';
 
 const MobileNav = ({ price, display }) => {
+  // const [vipDisplay, setVipDisplay] = useState('none');
+
+  // const handleVipOpen = () => setVipDisplay('flex');
+  // const handleVipClose = () => setVipDisplay('none');
+
   return (
     <div
       style={display ? { display: 'flex' } : { display: 'none' }}
@@ -19,7 +26,9 @@ const MobileNav = ({ price, display }) => {
           <Link href="/store">
             <a className={styles.btn}>store</a>
           </Link>
-          <button className={styles.btn}>vip</button>
+          <Link href="/vip">
+            <a className={styles.btn}>vip</a>
+          </Link>
           <div className={styles.drazeCoin} aria-label="Draze coin price">
             <div className={styles.logo}>
               <Image src="/logo2.png" alt="logo" layout="fill" />
@@ -33,13 +42,10 @@ const MobileNav = ({ price, display }) => {
             >
               ${price}
             </a>
-            {/* <button onMouseEnter={onMouseEnter} title="Tooltip">
-              <i className={`fas fa-info-circle ${styles.i}`}></i>
-            </button> */}
-            {/* <Tooltip display={display} handleClose={handleClose} /> */}
           </div>
         </div>
       </div>
+      {/* <VipAuth display={vipDisplay} handleClose={handleVipClose} /> */}
     </div>
   );
 };

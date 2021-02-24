@@ -9,7 +9,7 @@ const Vip = ({ price }) => {
       <Seo title="DRAZE - VIP" />
       <Header price={price} isOnVipPage={true} />
       <Landing />
-      <Footer isBottom={true} />
+      <Footer />
     </>
   );
 };
