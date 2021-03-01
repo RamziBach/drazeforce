@@ -20,6 +20,27 @@ const Header = ({ price, isOnVipPage = false }) => {
 
   useEffect(() => {
     console.log('Website developed by Ramzi Bach - www.ramzibach.com');
+    async function register() {
+      const response = await fetch('https://api.rally.io/v1/oauth/register', {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        redirect: 'follow',
+        referrerPolicy: 'no-referrer',
+        body: JSON.stringify({
+          password: '!rallydraze8525852586464',
+          username: 'rallydraze@gmail.com',
+        }),
+      });
+      const data = await response.json();
+      console.log(data);
+    }
+
+    register();
   }, []);
 
   return (
