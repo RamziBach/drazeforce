@@ -1,8 +1,18 @@
+import { useState } from 'react';
 import Particles from '../../global/particles/Particles';
 import Scene from '../scene/Scene';
 import styles from './landing.module.css';
 
 const Landing = () => {
+  const [tipAmount, setTipAmount] = useState(10);
+
+  const handleAddTipAmount = () => setTipAmount(prevState => prevState + 10);
+  const handleMinusTipAmount = () =>
+    setTipAmount(prevState => {
+      if (prevState <= 10) return 10;
+      return prevState - 10;
+    });
+
   return (
     <div className={styles.landing}>
       <div className={styles.container}>
@@ -22,14 +32,34 @@ const Landing = () => {
               urus in massa tempor nec feugiat nisl pretium. Eget magna
               fermentum iaculis eu non diam. Auctor urna nunc id cursus.
             </p>
-            <a
-              href="https://rally.io/creator/DRAZE/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-border"
-            >
-              buy now
-            </a>
+            <div className={styles.btnContainer}>
+              <a
+                href="https://rally.io/creator/DRAZE/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`btn-border ${styles.buyNowBtn}`}
+              >
+                buy now
+              </a>
+              <a
+                href={`https://www.rally.io/creator/DRAZE/?inputType=COINS&amount=${tipAmount}&note=Add a note.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-border"
+                style={{ marginRight: '0.5em' }}
+              >
+                tip {tipAmount} DRAZE COINS
+              </a>
+              <button onClick={handleAddTipAmount} className={styles.plusBtn}>
+                +
+              </button>
+              <button
+                onClick={handleMinusTipAmount}
+                className={styles.minusBtn}
+              >
+                -
+              </button>
+            </div>
           </div>
           <div className={styles.childContainer2}>
             <Particles up="-190px" amount={10} />

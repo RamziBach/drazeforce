@@ -1,6 +1,6 @@
 import Seo from '../components/global/seo/Seo';
 import Header from '../components/global/header/Header';
-import Index from '../components/store/index/Index';
+import Tip from '../components/store/index/Tip';
 
 const Store = ({ price }) => {
   return (
@@ -8,7 +8,7 @@ const Store = ({ price }) => {
       <Seo title="DRAZE - STORE" />
       <Header price={price} />
       <main>
-        <Index />
+        <Tip />
       </main>
     </>
   );

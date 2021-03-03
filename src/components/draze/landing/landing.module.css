@@ -22,6 +22,7 @@
   margin-top: 0;
   line-height: 1;
   text-transform: capitalize;
+  color: var(--clr-accent);
 }
 
 .subtitle {
@@ -32,6 +33,28 @@
   max-width: 30em;
   opacity: 0.7;
 }
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+}
+
+.buyNowBtn {
+  margin-right: 1em;
+}
+
+.plusBtn,
+.minusBtn {
+  color: var(--clr-accent);
+  font-weight: 500;
+  font-size: var(--fs-h4);
+  padding: 0.25em;
+  margin: 0.25em;
+}
+
+/* .plusBtn {
+  margin-right: 1em;
+} */
 
 .childContainer2 {
   display: flex;
