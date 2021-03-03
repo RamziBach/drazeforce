@@ -1,4 +1,4 @@
-.tip {
+.landing {
   margin-bottom: 10em;
 }
 
@@ -8,6 +8,6 @@
 }
 
 .title {
+  text-align: center;
   color: var(--clr-accent);
-  text-transform: capitalize;
 }
