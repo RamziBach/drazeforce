@@ -21,16 +21,13 @@ const Landing = () => {
             <h2 className={styles.title}>$DRAZE coin</h2>
             <h5 className={styles.subtitle}>What is it?</h5>
             <p className={styles.description}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+              Draze coin is the official creator coin of Draze Force. With Draze
+              Coin, you can buy music, exclusive merch and gain VIP access to
+              the Demo Vault.
             </p>
             <p className={styles.description}>
-              urus in massa tempor nec feugiat nisl pretium. Eget magna
-              fermentum iaculis eu non diam. Auctor urna nunc id cursus.
+              You can also use $DRAZE Coin to work with Draze Force for your
+              projects and needs.
             </p>
             <div className={styles.btnContainer}>
               <a

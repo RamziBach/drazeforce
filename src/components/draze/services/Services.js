@@ -15,9 +15,8 @@ const Services = () => {
               <h4 className={styles.serviceTitle}>Demo Review</h4>
               <div className={styles.servicesContainer}>
                 <p className={styles.servicesDescription}>
-                  Dolor velit amet eu ex aliqua occaecat dolor Lorem est laborum
-                  labore. Duis aute Lorem fugiat non magna exercitation laboris.
-                  Proident officia esse tempor fugiat.
+                  Looking for advice or direction? Send me your demo and I’ll
+                  give you my critique on the song writing and mix of the track.
                 </p>
                 <a
                   href="https://www.rally.io/creator/DRAZE/?inputType=USD&amount=100&note=Services for sale"
@@ -33,12 +32,10 @@ const Services = () => {
               <div className={styles.timescaleContainer}>
                 <Timescale />
               </div>
-              <h4 className={styles.serviceTitle}>Mastering</h4>
+              <h4 className={styles.serviceTitle}>Mixing</h4>
               <div className={styles.servicesContainer}>
                 <p className={styles.servicesDescription}>
-                  Dolor velit amet eu ex aliqua occaecat dolor Lorem est laborum
-                  labore. Duis aute Lorem fugiat non magna exercitation laboris.
-                  Proident officia esse tempor fugiat.
+                  Have your track mixed by me.
                 </p>
                 <a
                   href="https://www.rally.io/creator/DRAZE/?inputType=USD&amount=100&note=Services for sale"
@@ -56,12 +53,12 @@ const Services = () => {
               <div className={styles.timescaleContainer}>
                 <Timescale />
               </div>
-              <h4 className={styles.serviceTitle}>Produce a Track</h4>
+              <h4 className={styles.serviceTitle}>Sound Alert Commissions</h4>
               <div className={styles.servicesContainer}>
                 <p className={styles.servicesDescription}>
-                  Dolor velit amet eu ex aliqua occaecat dolor Lorem est laborum
-                  labore. Duis aute Lorem fugiat non magna exercitation laboris.
-                  Proident officia esse tempor fugiat.
+                  Are you a streamer looking to separate yourself? I’ll make you
+                  custom sound alerts to fix the vibe or your streams and
+                  channel.
                 </p>
                 <a
                   href="https://www.rally.io/creator/DRAZE/?inputType=USD&amount=100&note=Services for sale"
@@ -77,12 +74,10 @@ const Services = () => {
               <div className={styles.timescaleContainer}>
                 <Timescale />
               </div>
-              <h4 className={styles.serviceTitle}>1 on 1 mentoring</h4>
+              <h4 className={styles.serviceTitle}>Produce a Track</h4>
               <div className={styles.servicesContainer}>
                 <p className={styles.servicesDescription}>
-                  Dolor velit amet eu ex aliqua occaecat dolor Lorem est laborum
-                  labore. Duis aute Lorem fugiat non magna exercitation laboris.
-                  Proident officia esse tempor fugiat.
+                  Looking for an intro or outro track?
                 </p>
                 <a
                   href="https://www.rally.io/creator/DRAZE/?inputType=USD&amount=100&note=Services for sale"

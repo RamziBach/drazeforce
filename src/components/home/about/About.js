@@ -25,7 +25,14 @@ const About = () => {
               relocating from Minnesota to Colorado and collecting analog
               synths.
             </p>
-            <a className="btn-border">Twitch</a>
+            <a
+              href="https://www.twitch.tv/drazeforce"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-border"
+            >
+              Twitch
+            </a>
           </div>
           <div className={styles.border}>
             <ReactPlayer

@@ -7,10 +7,11 @@ const Discography = () => {
       <div className={styles.container}>
         <h3 className={styles.title}>Discography</h3>
         <p className={styles.description}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          The music is inspired by the sounds of Synthwave, Rock, Hip-hop, and
+          8-bit. This all blends together to make Draze Force unique. <br />{' '}
+          Below is some recently published music. Go listen on your favorite
+          audio streaming service! All published music is free from DMCA for
+          streamers.
         </p>
         <div className={styles.albumsGrid}>
           <Tilt

@@ -14,7 +14,15 @@ const Vip = ({ price }) => {
       {!session && (
         <>
           <h3>Not signed in.</h3>
-          <button style={{ color: 'white' }} onClick={() => signIn()}>
+          <button
+            style={{ color: 'white' }}
+            onClick={() =>
+              signIn('rally', {
+                callbackUrl: 'https://drazeforce.vercel.app/api/auth/callback',
+                url: 'https://rallyio-prod.auth.us-west-2.amazoncognito.com/',
+              })
+            }
+          >
             Sign in
           </button>
         </>
