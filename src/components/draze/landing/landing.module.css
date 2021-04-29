@@ -73,6 +73,37 @@
 
 .box {
   position: absolute;
-  width: 15em;
+  width: 15rem;
   transform: translate(0, 100px);
+}
+
+@media (max-width: 1330px) {
+  .parent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .btnContainer {
+    justify-content: center;
+  }
+
+  .childContainer1 {
+    margin-bottom: 10em;
+  }
+}
+
+@media (max-width: 776px) {
+  .constellations {
+    width: 40em;
+  }
+}
+
+@media (max-width: 570px) {
+  .childContainer2 {
+    display: none;
+  }
+
+  .childContainer1 {
+    margin-bottom: 0;
+  }
 }

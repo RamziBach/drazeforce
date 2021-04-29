@@ -19,12 +19,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2.5em;
 }
 
 .childparent {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 2.5em;
 }
 
 .child {
@@ -58,10 +61,30 @@
   min-height: 6.5em;
 }
 
-.marginLeft {
+/* .marginLeft {
   margin-left: 2.5em;
-}
+} */
 
-#marginBottom {
+/* #marginBottom {
   margin-bottom: 2.5em;
+} */
+
+@media (max-width: 510px) {
+  .title {
+    margin-bottom: 2.5em;
+  }
+
+  .timescaleContainer {
+    display: none;
+  }
+
+  .child {
+    border: none;
+  }
+
+  .servicesDescription {
+    margin: 0;
+    margin-bottom: 1em;
+    min-height: 0;
+  }
 }
