@@ -1,35 +1,34 @@
-import { signIn, signOut, useSession } from 'next-auth/client';
+import { useEffect } from 'react';
 import Seo from '../components/global/seo/Seo';
 import Header from '../components/global/header/Header';
-import Landing from '../components/vip/landing/Landing';
-import Footer from '../components/global/footer/Footer';
+import Index from '../components/vip/landing/Index';
 
 const Vip = ({ price }) => {
-  const [session, loading] = useSession();
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+    (async () => {
+      try {
+        const LocomotiveScroll = (await import('locomotive-scroll')).default;
+        const scroll = new LocomotiveScroll({
+          el: document.querySelector('[data-scroll-container]') ?? undefined,
+          smooth: true,
+        });
+      } catch (error) {
+        throw Error(`LocomotiveScroll: ${error}`);
+      }
+    })();
+    return () => scroll.destroy();
+  }, []);
 
   return (
     <>
       <Seo title="DRAZE - VIP" />
-      <Header price={price} isOnVipPage={true} />
-      {!session && (
-        <>
-          <h3>Not signed in.</h3>
-          <button
-            style={{ color: 'white' }}
-            onClick={() =>
-              signIn('rally', {
-                callbackUrl: 'https://drazeforce.vercel.app/api/auth/callback',
-                url: 'https://rallyio-prod.auth.us-west-2.amazoncognito.com/',
-              })
-            }
-          >
-            Sign in
-          </button>
-        </>
-      )}
-      {session && <Landing />}
-      {/* <Landing /> */}
-      <Footer />
+      <main data-scroll-container>
+        <Header price={price} isOnVipPage={true} />
+        <Index />
+      </main>
     </>
   );
 };

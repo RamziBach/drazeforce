@@ -14,17 +14,18 @@
 }
 
 .sectionTitle {
-  text-align: center;
+  text-transform: uppercase;
   line-height: 1;
+  margin-bottom: 2em;
+  color: var(--clr-accent);
 }
 
 .content {
-  text-align: center;
   margin-right: 5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .title {
@@ -42,9 +43,11 @@
 }
 
 .description {
+  font-weight: 300;
   opacity: 0.7;
-  max-width: 600px;
-  margin: 0 0 1rem 0;
+  /* max-width: 600px; */
+  max-width: 50ch;
+  margin: 0 0 1em 0;
 }
 
 .border iframe {

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Seo from '../components/global/seo/Seo';
 import Header from '../components/global/header/Header';
 import Landing from '../components/draze/landing/Landing';
@@ -5,13 +6,33 @@ import Services from '../components/draze/services/Services';
 import Footer from '../components/global/footer/Footer';
 
 const Draze = ({ price }) => {
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+    (async () => {
+      try {
+        const LocomotiveScroll = (await import('locomotive-scroll')).default;
+        const scroll = new LocomotiveScroll({
+          el: document.querySelector('[data-scroll-container]') ?? undefined,
+          smooth: true,
+        });
+      } catch (error) {
+        throw Error(`LocomotiveScroll: ${error}`);
+      }
+    })();
+    return () => scroll.destroy();
+  }, []);
+
   return (
     <>
       <Seo title="DRAZE - $DRAZE" />
-      <Header price={price} />
-      <Landing />
-      <Services />
-      <Footer />
+      <main data-scroll-container>
+        <Header price={price} />
+        <Landing />
+        <Services />
+        <Footer />
+      </main>
     </>
   );
 };

@@ -28,18 +28,18 @@
   align-items: center;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .modal {
   padding: 1em;
   background-color: var(--clr-accent);
   border-radius: 10px;
   /* box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); */
   max-width: 30em;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title {

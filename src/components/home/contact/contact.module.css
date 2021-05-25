@@ -8,21 +8,118 @@
 }
 
 .title {
-  text-align: center;
   line-height: 1;
-  margin-top: 0;
-  text-transform: capitalize;
+  margin-bottom: 2em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
 }
 
 .parent {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
-.description {
-  max-width: 40em;
-  opacity: 0.7;
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.inputContainer {
+  margin: 0.5em 0;
+}
+
+.input {
+  width: 35rem;
+  /* background-color: rgba(244, 63, 112, 0.15); */
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--clr-rgba);
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-h4);
+  margin-top: 0.5em;
+  padding: 0.2em 0;
+  resize: none;
+  color: var(--clr-light);
+  transition: all 0.3s;
+}
+
+@media (max-width: 700px) {
+  .input {
+    width: 25rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .input {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .input {
+    width: 15rem;
+  }
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--clr-light);
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.input:hover,
+.input:focus {
+  border-bottom: 2px solid var(--clr-accent);
+}
+
+.input::placeholder {
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-h4);
+}
+
+.input:disabled {
+  opacity: 0;
+}
+
+.label {
+  text-transform: uppercase;
+  font-family: var(--ff-poppins);
+  font-weight: 700;
+  font-size: var(--fs-h4);
+  color: var(--clr-accent);
+}
+
+.errorContainer {
+  height: 25px;
+  width: 100%;
+}
+
+.error {
+  font-weight: 700;
+  font-size: var(--fs-body);
+  font-family: var(--ff-poppins);
+  color: red;
+}
+
+.submitBtn {
+  text-transform: uppercase;
+  font-size: var(--fs-h4);
+  font-weight: 700;
+  padding: 0.5em 0;
+  margin: 0.5em 0;
+  display: flex;
+  align-items: center;
+  color: var(--clr-accent);
+  transition: all 0.3s;
+}
+
+.i {
+  color: var(--clr-accent);
+  margin-left: 0.5em;
 }
