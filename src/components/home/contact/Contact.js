@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
+import axios from 'axios';
 import styles from './contact.module.css';
 
 const MyTextInput = ({ label, ...props }) => {
@@ -52,6 +54,12 @@ const MyTextArea = ({ label, ...props }) => {
 };
 
 const Contact = () => {
+  const [serverState, setServerState] = useState();
+
+  const handleServerResponse = (ok, msg) => {
+    setServerState({ ok, msg });
+  };
+
   return (
     <div data-scroll-section>
       <section className={styles.contact}>
@@ -89,11 +97,21 @@ const Contact = () => {
                     .max(500, 'Must be 500 characters or less')
                     .required('Required'),
                 })}
-                onSubmit={(values, { setSubmitting }) => {
-                  setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
-                    setSubmitting(false);
-                  }, 400);
+                onSubmit={(values, { setSubmitting, resetForm }) => {
+                  axios({
+                    method: 'POST',
+                    url: 'https://formspree.io/f/xknkrork',
+                    data: values,
+                  })
+                    .then(response => {
+                      setSubmitting(false);
+                      resetForm();
+                      handleServerResponse(true, 'Email sent, Thanks!');
+                    })
+                    .catch(error => {
+                      setSubmitting(false);
+                      handleServerResponse(false, error.response.data.error);
+                    });
                 }}
               >
                 {({ isSubmitting }) => (
@@ -118,14 +136,27 @@ const Contact = () => {
                       placeholder="Enter your message."
                       rows="4"
                     />
-                    <button
-                      className={styles.submitBtn}
-                      disabled={isSubmitting}
-                      type="submit"
-                    >
-                      <div>Send</div>
-                      <i className={`far fa-paper-plane ${styles.i}`}></i>
-                    </button>
+                    <div className={styles.submitContainer}>
+                      <button
+                        className={styles.submitBtn}
+                        disabled={isSubmitting}
+                        type="submit"
+                      >
+                        <div>Send</div>
+                        <i className={`far fa-paper-plane ${styles.i}`}></i>
+                      </button>
+                      <div className={styles.errorContainer}>
+                        {serverState && (
+                          <p
+                            className={
+                              !serverState.ok ? 'error' : styles.success
+                            }
+                          >
+                            {serverState.msg}
+                          </p>
+                        )}
+                      </div>
+                    </div>
                   </Form>
                 )}
               </Formik>

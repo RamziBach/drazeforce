@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "formik": "^2.2.8",
     "locomotive-scroll": "^4.1.1",
     "matter-js": "^0.16.1",

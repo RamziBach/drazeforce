@@ -40,7 +40,7 @@ const Discography = () => {
                 ></Tilt>
               </div>
               <div className={`${styles.content} ${styles.contentRight}`}>
-                <h1 className={styles.contentTitle}>b. then and now</h1>
+                <h1 className={styles.contentTitle}>b.t.a.n</h1>
                 <button className={`btn-border ${styles.btnRight}`}>
                   listen now
                 </button>
