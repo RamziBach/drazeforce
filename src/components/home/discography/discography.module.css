@@ -7,159 +7,169 @@
   margin: 0 auto;
 }
 
-.albumsGrid {
-  display: grid;
-  justify-content: center;
-  grid-gap: 1em;
-  grid-template-columns: repeat(5, 250px);
-  grid-template-rows: repeat(3, 250px);
-  grid-template-areas:
-    'episo2 ...... episo1 ...... episo3'
-    'episo2 singl1 episo1 singl2 episo3'
-    '...... singl1 btn singl2 ......';
-}
-
 .title {
-  margin: 0;
-  text-align: center;
+  text-transform: uppercase;
+  color: var(--clr-light);
   line-height: 1;
+  margin-bottom: 2em;
 }
 
-.description {
-  text-align: center;
-  opacity: 0.7;
-  margin: 2.5rem auto 5rem auto;
-  max-width: 40em;
+.parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
 }
 
-.ep1 {
-  grid-area: episo1;
-  background-repeat: no-repeat;
+.ep1,
+.ep2,
+.ep3,
+.single1,
+.single2,
+.single3,
+.single4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallaxEffect {
   text-align: center;
+  width: 600px;
+  height: 600px;
   border-radius: 5px;
   transform-style: preserve-3d;
-  background-image: url('/ep1.jpg');
   background-size: cover;
   background-position: center center;
   will-change: transform;
+  /* border: 2px solid white; */
 }
 
-.ep2 {
-  grid-area: episo2;
-  background-repeat: no-repeat;
-  text-align: center;
-  border-radius: 5px;
-  transform-style: preserve-3d;
+.parallaxEffectEp1 {
   background-image: url('/ep2.jpg');
-  background-size: cover;
-  background-position: center center;
-  will-change: transform;
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-.ep3 {
-  grid-area: episo3;
-  background-repeat: no-repeat;
-  text-align: center;
-  border-radius: 5px;
-  transform-style: preserve-3d;
+.parallaxEffectEp2 {
+  background-image: url('/ep1.jpg');
+}
+
+.parallaxEffectEp3 {
   background-image: url('/ep3.jpg');
-  background-size: cover;
-  background-position: center center;
-  will-change: transform;
 }
 
-.singl1 {
-  grid-area: singl1;
-  background-repeat: no-repeat;
-  text-align: center;
-  border-radius: 5px;
-  transform-style: preserve-3d;
+.parallaxEffectSingle1 {
   background-image: url('/single1.jpg');
-  background-size: cover;
-  background-position: center center;
-  will-change: transform;
 }
 
-.singl2 {
-  grid-area: singl2;
-  background-repeat: no-repeat;
-  text-align: center;
-  border-radius: 5px;
-  transform-style: preserve-3d;
+.parallaxEffectSingle2 {
   background-image: url('/single2.jpg');
-  background-size: cover;
-  background-position: center center;
-  will-change: transform;
 }
 
-.btn {
-  grid-area: btn;
-  justify-self: center;
-  align-self: center;
+.parallaxEffectSingle3 {
+  background-image: url('/single3.jpg');
 }
 
-.card {
-  width: 250;
-  /* height: 116px; */
-  transform: translateZ(60px);
-  /* background-color: var(--clr-rgba);
-  border-radius: 5px; */
-  /* padding-top: 0.1em; */
+/* .parallaxEffectSingle4 {
+  background-image: url('/single4.jpg');
+} */
+
+.contentLeft,
+.contentRight {
+  position: absolute;
+  z-index: 9;
+  pointer-events: none;
 }
 
-.cardTitle {
-  user-select: none;
-  line-height: 1;
+.contentLeft {
+  left: 10%;
+}
+
+.contentRight {
+  right: 10%;
+}
+
+.contentTitle {
+  /* line-height: 1; */
+  margin: 0;
+  white-space: nowrap;
+  font-size: 7rem;
   text-transform: uppercase;
   color: var(--clr-accent);
-  /* transform: translate(0, -35px); */
+  cursor: default;
+  user-select: none;
 }
 
-.cardBtn {
-  /* transform: translate(0, -35px); */
-  margin-bottom: 1em;
+.btnRight {
+  float: right;
+  pointer-events: auto;
+}
+
+.btnLeft {
+  float: left;
+  pointer-events: auto;
+}
+
+@media (min-width: 2100px) {
+  .contentLeft {
+    left: 15%;
+  }
+
+  .contentRight {
+    right: 15%;
+  }
 }
 
 @media (max-width: 1600px) {
-  .albumsGrid {
-    grid-template-columns: repeat(5, 200px);
-    grid-template-rows: repeat(3, 200px);
+  .parallaxEffect {
+    width: 450px;
+    height: 450px;
+  }
+
+  .contentTitle {
+    font-size: 5.5rem;
   }
 }
 
-@media (max-width: 1300px) {
-  .albumsGrid {
-    grid-template-columns: repeat(5, 150px);
-    grid-template-rows: repeat(3, 150px);
+@media (max-width: 1100px) {
+  .contentLeft {
+    left: 5%;
   }
 
-  .cardBtn {
-    font-size: var(--fs-small);
-  }
-}
-
-@media (max-width: 900px) {
-  .albumsGrid {
-    grid-template-columns: repeat(5, 120px);
-    grid-template-rows: repeat(3, 120px);
+  .contentRight {
+    right: 5%;
   }
 
-  .cardBtn {
-    font-size: 0.6rem;
+  .contentTitle {
+    font-size: 4rem;
   }
 }
 
 @media (max-width: 750px) {
-  .albumsGrid {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 120px);
-    grid-gap: 1.5em;
-    grid-template-areas:
-      'episo2 episo2 episo1 episo1'
-      'episo2 episo2 episo1 episo1'
-      '...... episo3 episo3 ......'
-      '...... episo3 episo3 ......'
-      'singl1 singl1 singl2 singl2'
-      'singl1 singl1 singl2 singl2';
+  .contentTitle {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .parallaxEffect {
+    width: 350px;
+    height: 350px;
+  }
+
+  .contentTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .parallaxEffect {
+    width: 300px;
+    height: 300px;
+  }
+
+  .contentTitle {
+    font-size: 1.5rem;
   }
 }

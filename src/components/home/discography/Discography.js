@@ -6,133 +6,166 @@ const Discography = () => {
     <div data-scroll-section>
       <section className={styles.discography}>
         <div className={styles.container}>
-          <h3 className={styles.title}>Discography</h3>
-          <p className={styles.description}>
+          <h3
+            data-scroll
+            data-scroll-speed={-1}
+            data-scroll-direction="horizontal"
+            className={styles.title}
+          >
+            Discography
+          </h3>
+          {/* <p className={styles.description}>
             The music is inspired by the sounds of Synthwave, Rock, Hip-hop, and
             8-bit. This all blends together to make Draze Force unique. <br />{' '}
             Below is some recently published music. Go listen on your favorite
             audio streaming service! All published music is free from DMCA for
             streamers.
-          </p>
-          <div className={styles.albumsGrid}>
-            <Tilt
-              className={styles.ep1}
-              perspective={500}
-              tiltMaxAngleX={10}
-              tiltMaxAngleY={10}
-              tiltReverse={true}
-              scale={1.06}
-              transitionSpeed={6000}
-            >
-              <div className={styles.card}>
-                {/* <h3 className={styles.cardTitle}>phantom power</h3> */}
-                <a
-                  className={`btn-bg ${styles.cardBtn}`}
-                  href="https://open.spotify.com/album/3aZgDA2OdCqUz0TQ7nzF41"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Opens spotify"
-                >
-                  phantom power
-                </a>
+          </p> */}
+          <div className={styles.parent}>
+            <div className={styles.ep1}>
+              <div
+                className={styles.imgContainer}
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed={-8}
+              >
+                <Tilt
+                  className={`${styles.parallaxEffect} ${styles.parallaxEffectEp1}`}
+                  perspective={500}
+                  tiltMaxAngleX={10}
+                  tiltMaxAngleY={10}
+                  tiltReverse={true}
+                  scale={1.06}
+                  transitionSpeed={6000}
+                ></Tilt>
               </div>
-            </Tilt>
-            <Tilt
-              className={styles.ep2}
-              perspective={500}
-              tiltMaxAngleX={10}
-              tiltMaxAngleY={10}
-              tiltReverse={true}
-              scale={1.06}
-              transitionSpeed={6000}
-            >
-              <div className={styles.card}>
-                {/* <h3 className={styles.cardTitle}>between then and now</h3> */}
-                <a
-                  className={`btn-bg ${styles.cardBtn}`}
-                  href="https://open.spotify.com/album/3aZgDA2OdCqUz0TQ7nzF41"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Opens spotify"
-                >
-                  then and now
-                </a>
+              <div className={`${styles.content} ${styles.contentRight}`}>
+                <h1 className={styles.contentTitle}>b. then and now</h1>
+                <button className={`btn-border ${styles.btnRight}`}>
+                  listen now
+                </button>
               </div>
-            </Tilt>
-            <Tilt
-              className={styles.ep3}
-              perspective={500}
-              tiltMaxAngleX={10}
-              tiltMaxAngleY={10}
-              tiltReverse={true}
-              scale={1.06}
-              transitionSpeed={6000}
-            >
-              <div className={styles.card}>
-                {/* <h3 className={styles.cardTitle}>III</h3> */}
-                <a
-                  className={`btn-bg ${styles.cardBtn}`}
-                  href="https://open.spotify.com/album/3aZgDA2OdCqUz0TQ7nzF41"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Opens spotify"
-                >
-                  I I I
-                </a>
+            </div>
+            <div className={styles.ep2}>
+              <div
+                className={styles.imgContainer}
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed={8}
+              >
+                <Tilt
+                  className={`${styles.parallaxEffect} ${styles.parallaxEffectEp2}`}
+                  perspective={500}
+                  tiltMaxAngleX={10}
+                  tiltMaxAngleY={10}
+                  tiltReverse={true}
+                  scale={1.06}
+                  transitionSpeed={6000}
+                ></Tilt>
               </div>
-            </Tilt>
-            <Tilt
-              className={styles.singl1}
-              perspective={500}
-              tiltMaxAngleX={10}
-              tiltMaxAngleY={10}
-              tiltReverse={true}
-              scale={1.06}
-              transitionSpeed={6000}
-            >
-              <div className={styles.card}>
-                {/* <h3 className={styles.cardTitle}>august</h3> */}
-                <a
-                  className={`btn-bg ${styles.cardBtn}`}
-                  href="https://open.spotify.com/album/3aZgDA2OdCqUz0TQ7nzF41"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Opens spotify"
-                >
-                  august
-                </a>
+              <div className={`${styles.content} ${styles.contentLeft}`}>
+                <h1 className={styles.contentTitle}>phantom power</h1>
+                <button className={`btn-border ${styles.btnLeft}`}>
+                  listen now
+                </button>
               </div>
-            </Tilt>
-            <Tilt
-              className={styles.singl2}
-              perspective={500}
-              tiltMaxAngleX={10}
-              tiltMaxAngleY={10}
-              tiltReverse={true}
-              scale={1.06}
-              transitionSpeed={6000}
-            >
-              <div className={styles.card}>
-                {/* <h3 className={styles.cardTitle}>chilled</h3> */}
-                <a
-                  className={`btn-bg ${styles.cardBtn}`}
-                  href="https://open.spotify.com/album/3aZgDA2OdCqUz0TQ7nzF41"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Opens spotify"
-                >
-                  chilled
-                </a>
+            </div>
+            <div className={styles.ep3}>
+              <div
+                className={styles.imgContainer}
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed={-8}
+              >
+                <Tilt
+                  className={`${styles.parallaxEffect} ${styles.parallaxEffectEp3}`}
+                  perspective={500}
+                  tiltMaxAngleX={10}
+                  tiltMaxAngleY={10}
+                  tiltReverse={true}
+                  scale={1.06}
+                  transitionSpeed={6000}
+                ></Tilt>
               </div>
-            </Tilt>
-            {/* <a
-            className={`btn-border ${styles.btn}`}
-            href="https://soundcloud.com/drazeforce"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Soundcloud
-          </a> */}
+              <div className={`${styles.content} ${styles.contentRight}`}>
+                <h1 className={styles.contentTitle}>draze ep III</h1>
+                <button className={`btn-border ${styles.btnRight}`}>
+                  listen now
+                </button>
+              </div>
+            </div>
+            <div className={styles.single1}>
+              <div
+                className={styles.imgContainer}
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed={8}
+              >
+                <Tilt
+                  className={`${styles.parallaxEffect} ${styles.parallaxEffectSingle1}`}
+                  perspective={500}
+                  tiltMaxAngleX={10}
+                  tiltMaxAngleY={10}
+                  tiltReverse={true}
+                  scale={1.06}
+                  transitionSpeed={6000}
+                ></Tilt>
+              </div>
+              <div className={`${styles.content} ${styles.contentLeft}`}>
+                <h1 className={styles.contentTitle}>august</h1>
+                <button className={`btn-border ${styles.btnLeft}`}>
+                  listen now
+                </button>
+              </div>
+            </div>
+            <div className={styles.single2}>
+              <div
+                className={styles.imgContainer}
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed={-8}
+              >
+                <Tilt
+                  className={`${styles.parallaxEffect} ${styles.parallaxEffectSingle2}`}
+                  perspective={500}
+                  tiltMaxAngleX={10}
+                  tiltMaxAngleY={10}
+                  tiltReverse={true}
+                  scale={1.06}
+                  transitionSpeed={6000}
+                ></Tilt>
+              </div>
+              <div className={`${styles.content} ${styles.contentRight}`}>
+                <h1 className={styles.contentTitle}>chilled</h1>
+                <button className={`btn-border ${styles.btnRight}`}>
+                  listen now
+                </button>
+              </div>
+            </div>
+            <div className={styles.single3}>
+              <div
+                className={styles.imgContainer}
+                data-scroll
+                data-scroll-direction="horizontal"
+                data-scroll-speed={8}
+              >
+                <Tilt
+                  className={`${styles.parallaxEffect} ${styles.parallaxEffectSingle3}`}
+                  perspective={500}
+                  tiltMaxAngleX={10}
+                  tiltMaxAngleY={10}
+                  tiltReverse={true}
+                  scale={1.06}
+                  transitionSpeed={6000}
+                ></Tilt>
+              </div>
+              <div className={`${styles.content} ${styles.contentLeft}`}>
+                <h1 className={styles.contentTitle}>time trial</h1>
+                <button className={`btn-border ${styles.btnLeft}`}>
+                  listen now
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
