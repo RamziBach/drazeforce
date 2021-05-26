@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
 import styles from './contact.module.css';
@@ -64,7 +65,12 @@ const Contact = () => {
             get in touch
           </h3>
           <div className={styles.parent}>
-            <div>
+            <div className={styles.imgContainer}>
+              <div className={styles.imgContainerChild}>
+                <Image layout="fill" src="/logo.png" alt="logo" />
+              </div>
+            </div>
+            <div className={styles.formContainer}>
               <Formik
                 initialValues={{
                   name: '',

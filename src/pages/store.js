@@ -1,34 +1,42 @@
-import { useEffect } from 'react';
+import { useRef } from 'react';
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import Seo from '../components/global/seo/Seo';
 import Header from '../components/global/header/Header';
 import Index from '../components/store/index/Index';
 
 const Store = ({ price }) => {
-  useEffect(() => {
-    if (typeof window === 'undefined') {
-      return;
-    }
-    (async () => {
-      try {
-        const LocomotiveScroll = (await import('locomotive-scroll')).default;
-        const scroll = new LocomotiveScroll({
-          el: document.querySelector('[data-scroll-container]') ?? undefined,
-          smooth: true,
-        });
-      } catch (error) {
-        throw Error(`LocomotiveScroll: ${error}`);
-      }
-    })();
-    return () => scroll.destroy();
-  }, []);
+  const containerRef = useRef(null);
 
   return (
     <>
       <Seo title="DRAZE - STORE" />
-      <main data-scroll-container>
-        <Header price={price} />
-        <Index />
-      </main>
+      <LocomotiveScrollProvider
+        options={{
+          smooth: true,
+          tablet: {
+            smooth: true,
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+          },
+          smartphone: {
+            smooth: true,
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+          },
+          // ... all available Locomotive Scroll instance options
+        }}
+        watch={
+          [
+            //...all the dependencies you want to watch to update the scroll
+          ]
+        }
+        containerRef={containerRef}
+      >
+        <main data-scroll-container>
+          <Header price={price} />
+          <Index />
+        </main>
+      </LocomotiveScrollProvider>
     </>
   );
 };
