@@ -148,6 +148,11 @@
     margin: 0 auto;
   }
 
+  .imgContainerChild {
+    width: 17em;
+    height: 17em;
+  }
+
   .formContainer {
     width: 100%;
   }
@@ -155,7 +160,7 @@
 
 @media (max-width: 425px) {
   .imgContainerChild {
-    width: 20em;
-    height: 20em;
+    width: 15em;
+    height: 15em;
   }
 }
