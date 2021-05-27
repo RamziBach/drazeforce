@@ -37,9 +37,9 @@ const Index = () => {
               <Particles />
               <h2 className={styles.title}>draze force</h2>
               <p className={styles.description}>
-                Returning to his original inspirations, Draze Force is blending
-                8-bit sounds with analog synths to create his own sound in the
-                synthwave world.
+                Music Artist turned Streamer, Draze Force is producing original
+                tracks live on Twitch for viewers to enjoy through the ‘Phantom
+                Power’ series.
               </p>
               <a
                 className={`btn-border ${styles.spotifyBtn}`}

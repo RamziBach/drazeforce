@@ -41,9 +41,14 @@ const Discography = () => {
               </div>
               <div className={`${styles.content} ${styles.contentRight}`}>
                 <h1 className={styles.contentTitle}>b.t.a.n</h1>
-                <button className={`btn-border ${styles.btnRight}`}>
+                <a
+                  href="https://open.spotify.com/album/4iMvvOx4MuKXICaQnhzJw7?si=_-2BxyscRJaz0_75zAEPSA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`btn-border ${styles.btnRight}`}
+                >
                   listen now
-                </button>
+                </a>
               </div>
             </div>
             <div className={styles.ep2}>
@@ -65,9 +70,14 @@ const Discography = () => {
               </div>
               <div className={`${styles.content} ${styles.contentLeft}`}>
                 <h1 className={styles.contentTitle}>phantom power</h1>
-                <button className={`btn-border ${styles.btnLeft}`}>
+                <a
+                  href="https://open.spotify.com/album/3aZgDA2OdCqUz0TQ7nzF41?si=qWVO_3aPRlC1kJ-f10uV7w"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`btn-border ${styles.btnLeft}`}
+                >
                   listen now
-                </button>
+                </a>
               </div>
             </div>
             <div className={styles.ep3}>
@@ -89,9 +99,14 @@ const Discography = () => {
               </div>
               <div className={`${styles.content} ${styles.contentRight}`}>
                 <h1 className={styles.contentTitle}>draze ep III</h1>
-                <button className={`btn-border ${styles.btnRight}`}>
+                <a
+                  href="https://open.spotify.com/album/1mAU37AiVst2xkpYfCWQCz?si=VPOFyjbIQ7e4XA-PgmLTtQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`btn-border ${styles.btnRight}`}
+                >
                   listen now
-                </button>
+                </a>
               </div>
             </div>
             <div className={styles.single1}>
@@ -113,9 +128,14 @@ const Discography = () => {
               </div>
               <div className={`${styles.content} ${styles.contentLeft}`}>
                 <h1 className={styles.contentTitle}>august</h1>
-                <button className={`btn-border ${styles.btnLeft}`}>
+                <a
+                  href="https://open.spotify.com/album/1x9XbNMthZ1JRCEknuJ4LP?si=g96q0dIdTVC86wZ0mfn5MA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`btn-border ${styles.btnLeft}`}
+                >
                   listen now
-                </button>
+                </a>
               </div>
             </div>
             <div className={styles.single2}>
@@ -137,9 +157,14 @@ const Discography = () => {
               </div>
               <div className={`${styles.content} ${styles.contentRight}`}>
                 <h1 className={styles.contentTitle}>chilled</h1>
-                <button className={`btn-border ${styles.btnRight}`}>
+                <a
+                  href="https://open.spotify.com/album/5dUp8vtEAciJMiFeOdG4t4?si=td7SxpYJR3azaJOUOd5p3A"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`btn-border ${styles.btnRight}`}
+                >
                   listen now
-                </button>
+                </a>
               </div>
             </div>
             <div className={styles.single3}>
@@ -161,9 +186,14 @@ const Discography = () => {
               </div>
               <div className={`${styles.content} ${styles.contentLeft}`}>
                 <h1 className={styles.contentTitle}>time trial</h1>
-                <button className={`btn-border ${styles.btnLeft}`}>
+                <a
+                  href="https://open.spotify.com/album/1zunoqsnkfl5cNrxME5Aj3?si=NiqwaXPHQuCtsoD2pupYPQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`btn-border ${styles.btnLeft}`}
+                >
                   listen now
-                </button>
+                </a>
               </div>
             </div>
           </div>
