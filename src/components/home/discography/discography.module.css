@@ -22,13 +22,7 @@
   gap: 5em;
 }
 
-.ep1,
-.ep2,
-.ep3,
-.single1,
-.single2,
-.single3,
-.single4 {
+.albums {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,10 +65,6 @@
   background-image: url('/single3.jpg');
 }
 
-/* .parallaxEffectSingle4 {
-  background-image: url('/single4.jpg');
-} */
-
 .contentLeft,
 .contentRight {
   position: absolute;
@@ -91,7 +81,6 @@
 }
 
 .contentTitle {
-  /* line-height: 1; */
   margin: 0;
   white-space: nowrap;
   font-size: 7rem;

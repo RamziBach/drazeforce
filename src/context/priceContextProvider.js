@@ -14,6 +14,7 @@ const PriceContextProvider = ({ children }) => {
       const priceData = data.priceInUSD.toString().slice(0, 5);
       setPrice(priceData);
     } catch (error) {
+      setPrice('');
       console.log(error);
     }
   };
