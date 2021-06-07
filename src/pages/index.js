@@ -38,8 +38,8 @@ const Home = () => {
         }
         containerRef={containerRef}
       >
+        <Header price={price} />
         <main data-scroll-container ref={containerRef}>
-          <Header price={price} />
           <Index />
           <About />
           <Discography />

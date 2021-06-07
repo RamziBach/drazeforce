@@ -23,7 +23,7 @@ const Header = ({ price, isOnVipPage = false }) => {
   }, []);
 
   return (
-    <div data-section-scroll>
+    <>
       <header className={styles.header}>
         <div className={styles.container}>
           <div className={styles.parent}>
@@ -98,7 +98,7 @@ const Header = ({ price, isOnVipPage = false }) => {
         <VipAuth display={vipDisplay} handleClose={handleVipClose} />
         <MobileNav price={price} display={isMobileDisplayOpen} />
       </header>
-    </div>
+    </>
   );
 };
 
