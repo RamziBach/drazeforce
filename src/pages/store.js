@@ -34,8 +34,8 @@ const Store = () => {
         }
         containerRef={containerRef}
       >
-        <Header price={price} />
         <main data-scroll-container>
+          <Header price={price} />
           <Index />
         </main>
       </LocomotiveScrollProvider>

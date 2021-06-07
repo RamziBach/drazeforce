@@ -34,8 +34,8 @@ const Vip = () => {
         }
         containerRef={containerRef}
       >
-        <Header price={price} isOnVipPage={true} />
         <main data-scroll-container>
+          <Header price={price} isOnVipPage={true} />
           <Index />
         </main>
       </LocomotiveScrollProvider>

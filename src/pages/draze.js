@@ -36,8 +36,8 @@ const Draze = () => {
         }
         containerRef={containerRef}
       >
-        <Header price={price} />
         <main data-scroll-container ref={containerRef}>
+          <Header price={price} />
           <Landing />
           <Services />
           <Footer />
