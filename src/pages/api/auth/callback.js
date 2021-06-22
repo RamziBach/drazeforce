@@ -5,7 +5,7 @@ import {
   setCookie,
 } from '../../../../utils/helperFunctions';
 
-export default async (req, res) => {
+const userinfo = async (req, res) => {
   if (!access_token) {
     res.status(401).json({ error: 'Application not registered with Rally' });
   }
@@ -23,10 +23,14 @@ export default async (req, res) => {
       { Authorization: 'Bearer ' + access_token }
     );
     const data = rally_response.data;
-    setCookie(username, data.username, 7);
-    setCookie(username, data.rnbUserId, 7);
-    res.redirect('/vip');
+    setCookie('username', data.username, 7);
+    setCookie('rnbUserId', data.rnbUserId, 7);
   } catch (err) {
     res.status(500);
   }
+};
+
+export default async (req, res) => {
+  await userinfo(req, res);
+  res.redirect('/vip');
 };
