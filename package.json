@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "cookies": "^0.8.0",
     "formik": "^2.2.8",
     "locomotive-scroll": "^4.1.1",
     "matter-js": "^0.17.1",

@@ -1,8 +1,8 @@
+import Cookies from 'cookies';
 import {
   rally_api_url,
   httpPost,
   access_token,
-  setCookie,
 } from '../../../../utils/helperFunctions';
 
 const userinfo = async (req, res) => {
@@ -23,14 +23,24 @@ const userinfo = async (req, res) => {
       { Authorization: 'Bearer ' + access_token }
     );
     const data = rally_response.data;
-    setCookie('username', data.username, 7);
-    setCookie('rnbUserId', data.rnbUserId, 7);
+    return data;
   } catch (err) {
     res.status(500);
   }
 };
 
 export default async (req, res) => {
-  await userinfo(req, res);
-  res.redirect('/vip');
+  try {
+    const cookies = new Cookies(req, res);
+    const userData = await userinfo(req, res);
+    cookies.set('username', userData.username, {
+      httpOnly: true,
+    });
+    cookies.set('rnbUserId', userData.rnbUserId, {
+      httpOnly: true,
+    });
+    res.redirect('/vip');
+  } catch (err) {
+    res.status(500);
+  }
 };
