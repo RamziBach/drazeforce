@@ -1,5 +1,4 @@
-import { useRef, useContext } from 'react';
-import { priceContext } from '../context/priceContextProvider';
+import { useRef } from 'react';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import Seo from '../components/global/seo/Seo';
 import Header from '../components/global/header/Header';
@@ -7,8 +6,7 @@ import Landing from '../components/draze/landing/Landing';
 import Services from '../components/draze/services/Services';
 import Footer from '../components/global/footer/Footer';
 
-const Draze = () => {
-  const { price } = useContext(priceContext);
+const Draze = ({ price }) => {
   const containerRef = useRef(null);
 
   return (
@@ -49,15 +47,15 @@ const Draze = () => {
 
 export default Draze;
 
-// export async function getStaticProps() {
-//   const response = await fetch(
-//     'https://api.rally.io/v1/creator_coins/DRAZE/price'
-//   );
-//   const data = await response.json();
-//   const price = data.priceInUSD.toString().slice(0, 5);
+export async function getStaticProps() {
+  const response = await fetch(
+    'https://api.rally.io/v1/creator_coins/DRAZE/price'
+  );
+  const data = await response.json();
+  const price = data.priceInUSD.toString().slice(0, 5);
 
-//   return {
-//     props: { price },
-//     revalidate: 30,
-//   };
-// }
+  return {
+    props: { price },
+    revalidate: 30,
+  };
+}

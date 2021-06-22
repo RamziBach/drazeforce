@@ -1,15 +1,8 @@
 import {
-  username,
-  password,
-  callback_url,
   rally_api_url,
   httpPost,
-  httpGet,
-  set_authentication,
   access_token,
-  refresh_token,
-  expires,
-  token_type,
+  setCookie,
 } from '../../../../utils/helperFunctions';
 
 const userinfo = async (req, res) => {
@@ -30,13 +23,14 @@ const userinfo = async (req, res) => {
       { Authorization: 'Bearer ' + access_token }
     );
     const data = rally_response.data;
-    return data;
+    setCookie(username, data.username, 7);
+    setCookie(username, data.rnbUserId, 7);
   } catch (err) {
     res.status(500);
   }
 };
 
 export default async (req, res) => {
-  const data = await userinfo(req, res);
-  res.status(200).json(data);
+  await userinfo(req, res);
+  res.redirect('/vip');
 };
