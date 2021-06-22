@@ -5,7 +5,7 @@ import {
   setCookie,
 } from '../../../../utils/helperFunctions';
 
-const userinfo = async (req, res) => {
+export default async (req, res) => {
   if (!access_token) {
     res.status(401).json({ error: 'Application not registered with Rally' });
   }
@@ -29,8 +29,4 @@ const userinfo = async (req, res) => {
   } catch (err) {
     res.status(500);
   }
-};
-
-export default async (req, res) => {
-  await userinfo(req, res);
 };
