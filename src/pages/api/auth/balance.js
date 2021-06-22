@@ -18,8 +18,12 @@ const getUserBalance = async (userId, res) => {
 };
 
 export default async (req, res) => {
-  const cookies = new Cookies(req, res);
-  const userId = cookies.get('rnbUserId');
-  const balanceData = await getUserBalance(userId, res);
-  res.status(200).json(balanceData);
+  try {
+    const cookies = new Cookies(req, res);
+    const userId = cookies.get('rnbUserId');
+    const balanceData = await getUserBalance(userId, res);
+    res.status(200).json(balanceData);
+  } catch (err) {
+    res.status(500);
+  }
 };
