@@ -1,7 +1,9 @@
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styles from './vipauth.module.css';
 
 const VipAuth = ({ display = 'none', handleClose }) => {
+  const router = useRouter();
+
   return (
     <div style={{ display }} className={styles.vipauth}>
       <div className={styles.container}>
@@ -18,14 +20,12 @@ const VipAuth = ({ display = 'none', handleClose }) => {
               Draze's VIP page.
             </p>
             <div className={styles.btnContainer}>
-              <button id={styles.marginRight} className={styles.btn}>
-                sign up
+              <button
+                onClick={() => router.push('/api/auth')}
+                className={styles.btn}
+              >
+                log in
               </button>
-              <Link href="/vip">
-                <button className={styles.btn}>
-                  <a>log in</a>
-                </button>
-              </Link>
             </div>
           </div>
         </div>
