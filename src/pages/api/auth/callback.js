@@ -25,6 +25,7 @@ const userinfo = async (req, res) => {
     const data = rally_response.data;
     setCookie(username, data.username, 7);
     setCookie(username, data.rnbUserId, 7);
+    res.redirect('/vip');
   } catch (err) {
     res.status(500);
   }
@@ -32,5 +33,4 @@ const userinfo = async (req, res) => {
 
 export default async (req, res) => {
   await userinfo(req, res);
-  res.redirect('/vip');
 };
