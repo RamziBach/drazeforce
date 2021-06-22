@@ -31,7 +31,6 @@ const userinfo = async (req, res) => {
 
 export default async (req, res) => {
   try {
-    const code = req.query.code;
     const cookies = new Cookies(req, res);
     const userData = await userinfo(req, res);
     cookies.set('username', userData.username, {
@@ -40,7 +39,7 @@ export default async (req, res) => {
     cookies.set('rnbUserId', userData.rnbUserId, {
       httpOnly: true,
     });
-    res.redirect(`/vip/${code}`);
+    res.redirect('/vip');
   } catch (err) {
     res.status(500);
   }

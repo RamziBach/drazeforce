@@ -1,5 +1,9 @@
 import Cookies from 'cookies';
-import { access_token, httpGet } from '../../../../utils/helperFunctions';
+import {
+  access_token,
+  httpGet,
+  rally_api_url,
+} from '../../../../utils/helperFunctions';
 
 const getUserBalance = async (userId, res) => {
   if (!access_token) {
