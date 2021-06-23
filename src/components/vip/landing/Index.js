@@ -18,7 +18,7 @@ const Index = () => {
     getBalance();
   }, []);
 
-  if (balance.error)
+  if (balance === undefined || balance.error)
     return <div>You must be logged in to view this content.</div>;
 
   const hasDraze = balance.some(item => item.coinKind === 'DRAZE');
