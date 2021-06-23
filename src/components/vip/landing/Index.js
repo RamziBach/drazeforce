@@ -1,17 +1,22 @@
+import { useState, useEffect } from 'react';
 import styles from './index.module.css';
 
 const Index = () => {
+  const [balance, setBalance] = useState();
+
   const getBalance = async () => {
     try {
       const res = await fetch('/api/auth/balance');
       const data = await res.json();
-      return data;
+      setBalance(data);
     } catch (err) {
       console.error(err);
     }
   };
 
-  const balance = getBalance();
+  useEffect(() => {
+    getBalance();
+  }, []);
 
   if (balance.error)
     return <div>You must be logged in to view this content.</div>;
