@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './index.module.css';
 
-const Index = () => {
+const GatedContent = () => {
   const [balance, setBalance] = useState();
 
   const getBalance = async () => {
@@ -19,24 +19,35 @@ const Index = () => {
   }, []);
 
   if (balance === undefined || balance.error)
-    return <div>You must be logged in to view this content.</div>;
+    return (
+      <h2 className={styles.title}>
+        You must be logged in to view this content.
+      </h2>
+    );
 
   const hasDraze = balance.some(item => item.coinKind === 'DRAZE');
 
-  if (!hasDraze) return <div>You do not own any $DRAZE coin.</div>;
+  if (!hasDraze)
+    return <h2 className={styles.title}>You do not own any $DRAZE coin.</h2>;
 
   const drazeBalance = balance.find(item => item.coinKind === 'DRAZE');
 
   if (hasDraze && drazeBalance.coinBalance < 10)
     return (
-      <div>You must own 10 or more $DRAZE coins to view this content.</div>
+      <h2 className={styles.title}>
+        You must own 10 or more $DRAZE coins to view this content.
+      </h2>
     );
 
+  return <h2 className={styles.title}>Welcome</h2>;
+};
+
+const Index = () => {
   return (
     <div data-scroll-section>
       <section className={styles.landing}>
         <div className={styles.container}>
-          <h2 className={styles.title}>Coming Soon !</h2>
+          <GatedContent />
         </div>
       </section>
     </div>
