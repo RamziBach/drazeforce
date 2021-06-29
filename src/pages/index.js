@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import { useRef } from 'react';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import Seo from '@components/global/seo';
@@ -45,6 +46,10 @@ const Home = ({ price }) => {
           <Footer />
         </main>
       </LocomotiveScrollProvider>
+      <Script
+        src="https://kit.fontawesome.com/cea17b0653.js"
+        crossOrigin="anonymous"
+      />
     </>
   );
 };

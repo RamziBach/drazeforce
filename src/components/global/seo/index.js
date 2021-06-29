@@ -37,10 +37,6 @@ const Seo = ({ title = 'Draze Force' }) => {
       />
       <meta name="twitter:creator" content="@DrazeForce" key="twhandle" />
       <meta name="twitter:card" content="summary" key="twcard" />
-      <script
-        src="https://kit.fontawesome.com/cea17b0653.js"
-        crossOrigin="anonymous"
-      ></script>
     </Head>
   );
 };

@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import { useRef } from 'react';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import Seo from '@components/global/seo';
@@ -37,6 +38,10 @@ const Vip = ({ price }) => {
           <Index />
         </main>
       </LocomotiveScrollProvider>
+      <Script
+        src="https://kit.fontawesome.com/cea17b0653.js"
+        crossOrigin="anonymous"
+      />
     </>
   );
 };
