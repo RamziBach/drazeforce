@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import Seo from '@components/global/seo';
 import Header from '@components/global/header';
-import Index from '@components/vip/landing';
+import Landing from '@components/vip/landing';
 
 const Vip = ({ price }) => {
   const containerRef = useRef(null);
@@ -35,7 +35,7 @@ const Vip = ({ price }) => {
       >
         <main data-scroll-container>
           <Header price={price} isOnVipPage={true} />
-          <Index />
+          <Landing />
         </main>
       </LocomotiveScrollProvider>
       <Script
