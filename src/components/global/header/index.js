@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import VipAuth from '../vip/VipAuth';
-import MobileNav from '../mobilenav/MobileNav';
+import VipAuth from '../vip';
+import MobileNav from '../mobilenav';
 import styles from './header.module.css';
-import Tooltip from '../tooltip/Tooltip';
+import Tooltip from '../tooltip';
 
 const Header = ({ price, isOnVipPage = false }) => {
   const [tooltipDisplay, setTooltipDisplay] = useState('none');

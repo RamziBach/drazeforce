@@ -1,4 +1,4 @@
-import Album from './albums/Albums';
+import Album from './albums';
 import styles from './discography.module.css';
 
 const Discography = () => {

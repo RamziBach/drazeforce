@@ -1,7 +1,7 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import VipAuth from '../vip/VipAuth';
+// import VipAuth from '../vip';
 import styles from './mobilenav.module.css';
 
 const MobileNav = ({ price, display }) => {

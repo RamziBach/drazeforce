@@ -1,12 +1,12 @@
 import { useRef } from 'react';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
-import Seo from '../components/global/seo/Seo';
-import Header from '../components/global/header/Header';
-import Index from '../components/home/index/Index';
-import About from '../components/home/about/About';
-import Discography from '../components/home/discography/Discography';
-import Contact from '../components/home/contact/Contact';
-import Footer from '../components/global/footer/Footer';
+import Seo from '@components/global/seo';
+import Header from '@components/global/header';
+import Index from '@components/home/index';
+import About from '@components/home/about';
+import Discography from '@components/home/discography';
+import Contact from '@components/home/contact';
+import Footer from '@components/global/footer';
 
 const Home = ({ price }) => {
   const containerRef = useRef(null);

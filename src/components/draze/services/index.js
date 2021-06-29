@@ -1,4 +1,4 @@
-import Timescale from '../timescale/Timescale';
+import Timescale from '../timescale';
 import styles from './services.module.css';
 
 const Services = () => {

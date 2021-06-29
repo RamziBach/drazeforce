@@ -1,6 +1,6 @@
 import Tilt from 'react-parallax-tilt';
-import Particles from '../../global/particles/Particles';
-import Socials from '../../global/socials/Socials';
+import Particles from '../../global/particles';
+import Socials from '../../global/socials';
 import styles from './index.module.css';
 
 const Index = () => {

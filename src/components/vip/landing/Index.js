@@ -18,6 +18,9 @@ const GatedContent = () => {
     getBalance();
   }, []);
 
+  const hasDraze = balance.some(item => item.coinKind === 'DRAZE');
+  const drazeBalance = balance.find(item => item.coinKind === 'DRAZE');
+
   if (balance === undefined || balance.error)
     return (
       <h2 className={styles.title}>
@@ -25,12 +28,8 @@ const GatedContent = () => {
       </h2>
     );
 
-  const hasDraze = balance.some(item => item.coinKind === 'DRAZE');
-
   if (!hasDraze)
     return <h2 className={styles.title}>You do not own any $DRAZE coin.</h2>;
-
-  const drazeBalance = balance.find(item => item.coinKind === 'DRAZE');
 
   if (hasDraze && drazeBalance.coinBalance < 10)
     return (

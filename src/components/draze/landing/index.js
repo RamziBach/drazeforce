@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Particles from '../../global/particles/Particles';
-import Scene from '../scene/Scene';
+import Particles from '../../global/particles';
+import Scene from '../scene';
 import styles from './landing.module.css';
 
 const Landing = () => {

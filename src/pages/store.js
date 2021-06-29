@@ -1,8 +1,8 @@
 import { useRef } from 'react';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
-import Seo from '../components/global/seo/Seo';
-import Header from '../components/global/header/Header';
-import Index from '../components/store/index/Index';
+import Seo from '@components/global/seo';
+import Header from '@components/global/header';
+import Index from '@components/store/index';
 
 const Store = ({ price }) => {
   const containerRef = useRef(null);
