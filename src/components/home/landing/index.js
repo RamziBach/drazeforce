@@ -3,7 +3,7 @@ import Particles from '../../global/particles';
 import Socials from '../../global/socials';
 import styles from './index.module.css';
 
-const Index = () => {
+const Landing = () => {
   return (
     <div data-scroll-section>
       <section className={styles.landing}>
@@ -58,4 +58,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Landing;

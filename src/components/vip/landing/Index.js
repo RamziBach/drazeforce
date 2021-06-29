@@ -18,15 +18,15 @@ const GatedContent = () => {
     getBalance();
   }, []);
 
-  const hasDraze = balance.some(item => item.coinKind === 'DRAZE');
-  const drazeBalance = balance.find(item => item.coinKind === 'DRAZE');
-
   if (balance === undefined || balance.error)
     return (
       <h2 className={styles.title}>
         You must be logged in to view this content.
       </h2>
     );
+
+  const hasDraze = balance.some(item => item.coinKind === 'DRAZE');
+  const drazeBalance = balance.find(item => item.coinKind === 'DRAZE');
 
   if (!hasDraze)
     return <h2 className={styles.title}>You do not own any $DRAZE coin.</h2>;
@@ -41,7 +41,7 @@ const GatedContent = () => {
   return <h2 className={styles.title}>Welcome</h2>;
 };
 
-const Index = () => {
+const Landing = () => {
   return (
     <div data-scroll-section>
       <section className={styles.landing}>
@@ -53,4 +53,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Landing;

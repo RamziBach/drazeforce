@@ -1,6 +1,6 @@
 import styles from './index.module.css';
 
-const Index = () => {
+const Landing = () => {
   return (
     <div data-scroll-section>
       <section className={styles.landing}>
@@ -12,4 +12,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Landing;
