@@ -17,7 +17,7 @@ const VipAuth = ({ display = 'none', handleClose }) => {
             </div>
             <p className={styles.description}>
               You must be logged in with your RALLY account to access the
-              Draze's VIP page.
+              Draze&apos;s VIP page.
             </p>
             <div className={styles.btnContainer}>
               <button
