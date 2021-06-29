@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import Seo from '@components/global/seo';
 import Header from '@components/global/header';
-import Landing from '@components/vip/landing';
+import Landing from '../components/vip/landing/index';
 
 const Vip = ({ price }) => {
   const containerRef = useRef(null);
