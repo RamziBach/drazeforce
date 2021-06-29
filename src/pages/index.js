@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import Seo from '@components/global/seo';
 import Header from '@components/global/header';
-import Index from '@components/home/index';
+import Landing from '@components/home/landing';
 import About from '@components/home/about';
 import Discography from '@components/home/discography';
 import Contact from '@components/home/contact';
@@ -39,7 +39,7 @@ const Home = ({ price }) => {
       >
         <main data-scroll-container ref={containerRef}>
           <Header price={price} />
-          <Index />
+          <Landing />
           <About />
           <Discography />
           <Contact />
